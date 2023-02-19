@@ -1,9 +1,6 @@
 import server_pkg.essentials as e
 from Plugins.PluginFiles.plugin import RouteManager
 
-RouteManager.initRoute(self)
-
-
 while(True):
     while(self.new == False):
         time.sleep(self.sleepTime)
