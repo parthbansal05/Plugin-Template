@@ -1,12 +1,12 @@
-import server_pkg.essentials as e
+import server_pkg.stephen as s
 
 
-@e.global_vars.app.route("/pluginHome", methods=["GET"], strict_slashes=False)
-@e.fl.login_required
+@s.global_vars.app.route("/pluginHome", methods=["GET"], strict_slashes=False)
+@s.login_required
 def pluginHome():
-    return e.render_template('/plugin_edpt/Home.html')
+    return s.render_template('/plugin_edpt/Home.html')
 
-@e.global_vars.app.route("/pluginAdmin", methods=["GET"], strict_slashes=False)
-@e.admin_required
+@s.global_vars.app.route("/pluginAdmin", methods=["GET"], strict_slashes=False)
+@s.admin_required
 def pluginAdminDashboard():
-    return e.render_template("/plugin_edpt/Admin.html")
+    return s.render_template("/plugin_edpt/Admin.html")
